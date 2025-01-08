@@ -49,7 +49,7 @@ try:
 
     print("Go To Profile Page...", flush=True)
 
-    driver.get('https://www.instagram.com/'+username_input)
+    driver.get('https://www.instagram.com/{username_input}')
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//a[contains(@href, '/following/')]"))
     )
