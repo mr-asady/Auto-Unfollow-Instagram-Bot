@@ -33,14 +33,16 @@ try:
         username_input = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.NAME, 'username'))
         )
-        username_input.send_keys('USERNAME_HERE')
+        user_name = 'USERNAME_HERE'
+        username_input.send_keys(user_name')
 
         password_input = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.NAME, 'password'))
         )
-        password_input.send_keys('PASSWORD_HERE')
+        password_input.send_keys('@@Mohammadreza1381Rah13@gmail.com##')
         password_input.send_keys(Keys.ENTER)
 
+        time.sleep(3)
         print("Login successfully...", flush=True)
 
         time.sleep(7)
@@ -49,7 +51,7 @@ try:
 
     print("Go To Profile Page...", flush=True)
 
-    driver.get('https://www.instagram.com/{username_input}')
+    driver.get('https://www.instagram.com/' + user_name)
     WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//a[contains(@href, '/following/')]"))
     )
