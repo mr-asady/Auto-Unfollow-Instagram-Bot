@@ -39,7 +39,7 @@ try:
         password_input = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.NAME, 'password'))
         )
-        password_input.send_keys('@@Mohammadreza1381Rah13@gmail.com##')
+        password_input.send_keys('PASSWORD_HERE')
         password_input.send_keys(Keys.ENTER)
 
         time.sleep(3)
